@@ -5,7 +5,7 @@ var server = {
     host:"localhost",
     user:"root",
     password:"password",
-    database:"tap"
+    database:"TFLMentoringDB"
 };
 
 
@@ -19,7 +19,7 @@ connection.connect(function(err) {
     console.log('Connected to MySQL as id ' + connection.threadId);
 });
 
-connection.query('SELECT * FROM emp', function (error, results, fields) {
+connection.query('SELECT * FROM topics', function (error, results, fields) {
     if (error) {
         console.error('Error executing query: ');
         return;
